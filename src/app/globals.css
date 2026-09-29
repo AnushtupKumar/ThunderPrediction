@@ -1,0 +1,62 @@
+/* ─── Reset & Base ─────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-inter, 'Inter', system-ui, sans-serif);
+  background: #060d1a;
+  color: #e2e8f0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Design Tokens ─────────────────────────────────────────────────────────── */
+:root {
+  /* Colors */
+  --color-bg-deep:      #060d1a;
+  --color-bg-dark:      #0a0f1e;
+  --color-bg-panel:     #0d1b2a;
+  --color-border:       rgba(59, 130, 246, 0.15);
+  --color-text-primary: #e2e8f0;
+  --color-text-muted:   #64748b;
+  --color-text-subtle:  #334155;
+  --color-accent-blue:  #3b82f6;
+  --color-accent-amber: #f59e0b;
+  --color-accent-teal:  #14b8a6;
+  --color-accent-red:   #ef4444;
+
+  /* Typography */
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* ─── Scrollbar ─────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.3);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.5);
+}
+
+/* ─── Leaflet overrides (global, can't be in module) ───────────────────────── */
+.leaflet-container {
+  background: #060d1a !important;
+  font-family: var(--font-inter, sans-serif) !important;
+}
+
+/* ─── Focus rings ───────────────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--color-accent-blue);
+  outline-offset: 2px;
+}

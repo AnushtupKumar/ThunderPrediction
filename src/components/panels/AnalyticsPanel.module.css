@@ -1,0 +1,26 @@
+.panel {
+  width: 270px;
+  flex-shrink: 0;
+  background: rgba(10, 15, 30, 0.92);
+  border-left: 1px solid rgba(59, 130, 246, 0.15);
+  padding: 0.875rem 0.875rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  backdrop-filter: blur(8px);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(59,130,246,0.3) transparent;
+}
+
+.panelTitle {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin: 0 0 0.75rem;
+}
+
+.spacer {
+  height: 0.6rem;
+}

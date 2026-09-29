@@ -1,0 +1,163 @@
+.container {
+  background: rgba(10, 15, 30, 0.95);
+  border-top: 1px solid rgba(59, 130, 246, 0.2);
+  padding: 0.6rem 1.5rem 0.5rem;
+  flex-shrink: 0;
+}
+
+.label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.4rem;
+}
+
+.labelText {
+  font-size: 0.7rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.labelSub {
+  color: #475569;
+  font-weight: 400;
+}
+
+.currentTime {
+  font-size: 0.72rem;
+  color: #60a5fa;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  min-width: 40px;
+  text-align: right;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.playBtn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(59, 130, 246, 0.15);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  color: #60a5fa;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.1s;
+  flex-shrink: 0;
+}
+
+.playBtn:hover {
+  background: rgba(59, 130, 246, 0.3);
+  transform: scale(1.05);
+}
+
+.playBtn:active {
+  transform: scale(0.95);
+}
+
+.sliderWrap {
+  position: relative;
+  flex: 1;
+  height: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.trackBg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(255,255,255,0.08);
+}
+
+.trackFill {
+  position: absolute;
+  left: 0;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #1d4ed8, #3b82f6, #8b5cf6);
+  transition: width 0.1s;
+  pointer-events: none;
+}
+
+.nowLine {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 2px;
+  height: 16px;
+  background: rgba(59, 130, 246, 0.7);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.nowLabel {
+  position: absolute;
+  bottom: calc(100% + 2px);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.55rem;
+  color: #60a5fa;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.tick {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 2px;
+  height: 8px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 1px;
+  pointer-events: none;
+  z-index: 1;
+  transition: background 0.2s, height 0.2s;
+}
+
+.tickActive {
+  background: #60a5fa;
+  height: 12px;
+}
+
+.rangeInput {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+  height: 24px;
+  z-index: 3;
+  margin: 0;
+}
+
+.minuteLabels {
+  position: relative;
+  height: 16px;
+  margin-top: 2px;
+}
+
+.minuteLabel {
+  position: absolute;
+  transform: translateX(-50%);
+  font-size: 0.6rem;
+  color: #334155;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.minuteLabelActive {
+  color: #60a5fa;
+  font-weight: 600;
+}

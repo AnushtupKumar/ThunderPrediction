@@ -1,0 +1,67 @@
+.banner {
+  border-radius: 8px;
+  border: 1px solid;
+  padding: 0.65rem 0.75rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  animation: slideIn 0.3s ease;
+  position: relative;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.typeTag {
+  flex-shrink: 0;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  padding: 0.2rem 0.45rem;
+  border-radius: 4px;
+  color: #fff;
+  margin-top: 1px;
+  white-space: nowrap;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+.description {
+  font-size: 0.72rem;
+  color: #e2e8f0;
+  margin: 0 0 0.25rem;
+  line-height: 1.4;
+}
+
+.areas {
+  font-size: 0.65rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.dismiss {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #64748b;
+  font-size: 0.75rem;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.15s;
+}
+
+.dismiss:hover {
+  color: #cbd5e1;
+}
