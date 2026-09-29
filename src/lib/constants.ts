@@ -67,6 +67,6 @@ export const ALERT_COLORS = {
 
 // ─── Tile Layer ───────────────────────────────────────────────────────────────
 export const DARK_TILE_URL =
-  `https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png?api_key=${process.env.NEXT_PUBLIC_STADIA_API_KEY || ''}`;
+  `https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png?api_key=${process.env.STADIA_API_KEY || ''}`;
 export const DARK_TILE_ATTRIBUTION =
   '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
